@@ -20,3 +20,10 @@ def search_student(students, keyword):
         if keyword.lower() in s.name.lower()
         or keyword.lower() in s.student_id.lower()
     ]
+def add_student(students, student_id, name, age, grade):
+    if any(s.student_id == student_id for s in students):
+        print("Ma sinh vien da ton tai")
+        return students
+    students.append(Student(student_id, name, age, grade))
+    return students
+
