@@ -13,3 +13,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def search_student(students, keyword):
+    return [
+        s for s in students
+        if keyword.lower() in s.name.lower()
+        or keyword.lower() in s.student_id.lower()
+    ]
