@@ -13,3 +13,10 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def add_student(students, student_id, name, age, grade):
+    if any(s.student_id == student_id for s in students):
+        print("Ma sinh vien da ton tai")
+        return students
+    students.append(Student(student_id, name, age, grade))
+    return students
